@@ -1,28 +1,31 @@
 {% load static %}<!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta charset = "utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewporSt" content="width=device-width, initial-scale=1.0">
     <title>WithPet</title>
-    <link rel = "stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href=S"{% static 'css/bootstrap.min.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            
-            <div class="container">
-                <a class="navbar-brand" href="{% url 'home' %}"><b>BOARD</b> </a>
-            </div>
-     </nav>
+    <div class="container">
+        <a class ="navbar-brand" href="{% url 'home' %}">게시판</a>
 
-     <br>
-     <br>   
-     <div class="container">
-       
-        {% block boardhead %}
-        {% endblock %}
-
-     </div>
-
+    </div>
+    </nav>
     
-</body>
+    <!-- 여기에 컨텐츠들을 계속 넣습니다.유지보수를 위해서 -->
+    <div class="container"> 
+        {% block content %}<!-- 이제 이부분에 content라는 이름으로 이어받아서 작성할수 있습니다. -->
+        {% endblock %}
+    </div>
+ </body>
+
+
 </html>
