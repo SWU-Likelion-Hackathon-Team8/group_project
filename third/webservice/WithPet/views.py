@@ -27,8 +27,6 @@ def posting(request, pk):
     return render(request, 'main/posting.html', {'post':post})
 
 
-
-
 #글쓰기
 
 def new_post(request):
